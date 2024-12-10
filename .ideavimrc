@@ -1,0 +1,38 @@
+""""""""""""""""""""""""
+"" Default
+""""""""""""""""""""""""
+let mapleader = " "
+vmap <leader>p "_dP
+set rnu
+set nu
+set hlsearch
+set scrolloff=3
+set visualbell
+set ignorecase smartcase
+imap jk <esc>
+nnoremap <Leader>n :noh<CR>
+set clipboard=unnamed
+set clipboard^=ideaput
+
+""""""""""""""""""""""""
+"" Action
+""""""""""""""""""""""""
+" built-in navigation to navigated items works better
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
+" but preserve ideavim defaults
+nnoremap g<c-o> <c-o>
+nnoremap g<c-i> <c-i>
+
+" built in search looks better
+nnoremap / :action Find<cr>
+" but preserve ideavim search
+nnoremap g/ /
+
+""""""""""""""""""""""""
+"" Plugin
+""""""""""""""""""""""""
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+nnoremap <space>e :NERDTreeToggle<cr>
